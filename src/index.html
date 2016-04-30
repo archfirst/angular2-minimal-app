@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>Angular2 Minimal App</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+
+<body>
+    <!-- This is where the components will be injected -->
+    <my-app>Loading...</my-app>
+
+    <!-- Load libraries (following angular2-seed) -->
+    <script src="/node_modules/systemjs/dist/system-polyfills.src.js"></script>
+    <script src="/node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="/node_modules/es6-shim/es6-shim.js"></script>
+    <script src="/node_modules/systemjs/dist/system.src.js"></script>
+    <script src="/node_modules/angular2/bundles/angular2-polyfills.js"></script>
+
+    <!-- Configure SystemJS (following angular2-seed) -->
+    <script>
+        System.config({
+            // This is required because TypeScript does not generate .js extension
+            // when it generates require calls. This also allows something like
+            // System.import('main') to HTTP GET /main.js from the server.
+            "defaultJSExtensions":true,
+
+            // Uncommenting packageConfigPaths and paths together causes SystemJS
+            // to go crazy. It starts requesting package.json files from the server!
+
+            // "packageConfigPaths": [
+            //     "/node_modules/*/package.json"
+            // ],
+
+            // "paths": {
+            //     "main": "/main",
+            //     "angular2/*": "/angular2/*",
+            //     "rxjs/*": "/rxjs/*",
+            //     "app/*": "/app/*",
+            //     "*": "/node_modules/*"
+            // },
+
+            // The app seems to work without the packages option
+            // "packages": {
+            //     "angular2": {
+            //         "defaultExtension": false
+            //     },
+            //     "rxjs": {
+            //         "defaultExtension": false
+            //     }
+            // }
+        });
+    </script>
+
+    <script src="/node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="/node_modules/angular2/bundles/angular2.js"></script>
+
+    <script>
+        // Start running the app from the main entry point
+        System.import('main')
+            .catch(function (e) {
+                console.error(e);
+            });
+    </script>
+
+</body>
+</html>

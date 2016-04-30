@@ -1,0 +1,36 @@
+{
+  "name": "angular2-minimal-app",
+  "version": "0.0.0",
+  "description": "A minimal app using Angular 2",
+  "repository": {
+    "url": "https://github.com/archfirst/angular2-minimal-app"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "gulp build",
+    "build.watch": "gulp build.watch",
+    "postinstall": "typings install && npm prune",
+    "start": "lite-server"
+  },
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.2.2",
+    "gulp-typescript": "^2.13.0",
+    "gulp-watch": "^4.3.5",
+    "install": "^0.6.1",
+    "run-sequence": "^1.1.5",
+    "typescript": "^1.8.10",
+    "typings": "^0.8.1"
+  },
+  "dependencies": {
+    "angular2": "^2.0.0-beta.17",
+    "es6-module-loader": "^0.17.8",
+    "es6-promise": "^3.1.2",
+    "es6-shim": "^0.35.0",
+    "reflect-metadata": "^0.1.2",
+    "rxjs": "^5.0.0-beta.6",
+    "systemjs": "^0.19.25",
+    "zone.js": "^0.6.12"
+  }
+}
